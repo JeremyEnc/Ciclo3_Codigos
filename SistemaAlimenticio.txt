@@ -1,5 +1,0 @@
-Jeremy Mejia	18	Femenino	Joven	Alimentos ricos en vitaminas y minerales	2003-02-07
-Mera	10	Masculino	Niño	Alimentos ricos en fibra	2011-04-07
-Allem	0	Masculino	Bebe	Leche Materna	2021-10-13
-Juana	38	Femenino	Adulto	Consumir las calorias adecuadas de acuerdo al peso	1983-11-23
-John	67	Masculino	Tercera Edad	Disminuir el consumo de calorias debido a la reduccion del gasto energetico	1954-12-22
