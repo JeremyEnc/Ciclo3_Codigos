@@ -1,3 +1,0 @@
-entity Control is
-port (Q: in bit_vector (3 downto 0); F: out bit_vector (0 to 7));
-end Control;

@@ -1,3 +1,0 @@
-enity Circuito is
-port (a,b,c,d,f,g,h, : in bit; F1: out bit);
-end Circuito;

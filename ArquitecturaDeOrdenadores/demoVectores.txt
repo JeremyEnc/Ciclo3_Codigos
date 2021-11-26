@@ -1,3 +1,0 @@
-entity Proyecto is
-port (A,B, : in bit_vector (3 downto 0);  C: inout bit_vector(3 downto 0); S: out bit_vector (3 downto 0));
-end Proyecto;
