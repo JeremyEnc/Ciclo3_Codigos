@@ -1,0 +1,21 @@
+library IEEE;
+
+use IEEE.std_logic_1164.all;
+
+entity circuitoe1 is
+	port (a,b: in bit_vector (0 to 1); c : out bit);
+end circuitoe1;
+
+use work.gates.all;
+
+architecture estructural of circuitoe1 is
+	signal x: bit_vector(0 to 1);
+begin
+
+	U0:  xnor2 port map (a(0),b(0), x(0));
+
+	U1:  xnor2 port map (a(1),b(1), x(1));
+
+	U2:  and2 port map (x(0),x(1), c);
+
+end estructural;

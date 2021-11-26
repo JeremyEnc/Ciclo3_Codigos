@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Multiplexor2bits is
+    Port ( a,b,c,d,s : in  STD_LOGIC_VECTOR (1 downto 0);
+           z : out  STD_LOGIC_VECTOR (1 downto 0));
+end Multiplexor2bits;
+
+architecture Behavioral of Multiplexor2bits is
+
+begin
+
+	process(s)
+	begin
+		case(s) is
+			when "00" => z <= a;
+			when "01" => z <= b;
+			when "10" => z <= c;
+			when others => z <= d;
+		end case;
+	end process;
+end Behavioral;

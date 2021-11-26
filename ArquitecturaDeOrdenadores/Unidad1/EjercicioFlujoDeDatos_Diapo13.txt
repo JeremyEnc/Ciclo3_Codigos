@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Tabla is
+port (A,B: in std_logic; F0, F1 : out std_logic);
+end Tabla;
+
+architecture flujo of tabla is
+begin
+	F0 <= '1' when (A='0' and B='0') else
+    	      '1' when  (A='0' and B='1') else
+              '0';
+
+    	F1 <= '0' when (A='1' and B='1') else
+    	       1';
+end flujo
