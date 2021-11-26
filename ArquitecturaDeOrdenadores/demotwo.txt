@@ -1,0 +1,18 @@
+-- Code your testbench here
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity twe is
+
+	port(a,b,c: in std_logic; 
+	 f : out std_logic);
+     
+end twe
+
+architecture demotwe of twe is
+
+begin
+
+f <= '1' when (a = '0' and b = '0' and c = '0') else
+     '1' when (a = '0' and b = '1' and c = '1') else	 '1' when (a = '1' and b = '1' and c = '0') else	 '1' when (a = '1' and b = '1' and c = '1') else 	  '0';
+end demotwe   

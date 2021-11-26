@@ -1,0 +1,4 @@
+entity Tabla is
+port( A, B, C: in bit;
+    F0, F1: out bit):
+end Tabla;
