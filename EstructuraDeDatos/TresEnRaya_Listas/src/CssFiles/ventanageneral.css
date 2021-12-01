@@ -1,0 +1,38 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+AnchorPane:hover
+{
+    -fx-background-color: #aec521;
+}
+
+Node
+{
+    -fx-background-color: #d3d6cd;
+}
+
+Label
+{
+    -fx-font: 15px "Lucida Console"; 
+}
+
+Button
+{
+    -fx-background-color: #597c18;
+    -fx-text-fill: #aec521; 
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 15;
+}
+
+Button:hover
+{
+    -fx-scale-x: 1.09;
+    -fx-scale-y: 1.09;
+}
+
+Button:pressed
+{
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
