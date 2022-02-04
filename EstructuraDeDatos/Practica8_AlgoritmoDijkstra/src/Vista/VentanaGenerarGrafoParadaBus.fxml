@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="709.0" prefWidth="600.0" stylesheets="@../cssFiles/EstiloSubVentanas.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorVentanaGenerarGrafoParadaBus">
+   <children>
+      <Separator layoutX="20.0" layoutY="163.0" prefHeight="13.0" prefWidth="600.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="29.0" layoutY="59.0" text="Nombre: " />
+      <Label layoutX="35.0" layoutY="96.0" text="Calle 1:" />
+      <Label layoutX="35.0" layoutY="134.0" text="Calle 2: " />
+      <Label layoutX="304.0" layoutY="59.0" text="Referencia: " />
+      <Label layoutX="335.0" layoutY="96.0" text="Ruta: " />
+      <Separator layoutX="20.0" layoutY="34.0" prefHeight="13.0" prefWidth="600.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="txtfNombre" layoutX="94.0" layoutY="55.0" />
+      <TextField fx:id="txtfCalle1" layoutX="94.0" layoutY="92.0" />
+      <TextField fx:id="txtfCalle2" layoutX="94.0" layoutY="130.0" />
+      <TextField fx:id="txtfReferencia" layoutX="383.0" layoutY="55.0" />
+      <TextField fx:id="txtfRuta" layoutX="383.0" layoutY="92.0" />
+      <Button layoutX="433.0" layoutY="130.0" mnemonicParsing="false" onAction="#agregarVertice" text="Agregar Vertice" />
+      <Button layoutX="355.0" layoutY="130.0" mnemonicParsing="false" onAction="#limpiarDatos" text="Limpiar" />
+      <Label layoutX="29.0" layoutY="14.0" text="Añadir Parada de Bus" />
+      <AnchorPane fx:id="apTabla" layoutY="170.0" prefHeight="320.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tvGrafo" layoutX="39.0" layoutY="71.0" prefHeight="246.0" prefWidth="522.0" />
+            <Label layoutX="19.0" layoutY="6.0" text="Añadir Arista" />
+            <Label layoutX="39.0" layoutY="29.0" text="Vertice Inicial: " />
+            <Label layoutX="173.0" layoutY="29.0" text="Vertice Final: " />
+            <Separator layoutX="20.0" layoutY="58.0" prefHeight="13.0" prefWidth="600.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <ComboBox fx:id="cbxVerticeInicial" layoutX="116.0" layoutY="25.0" prefHeight="25.0" prefWidth="31.0" />
+            <ComboBox fx:id="cbxVerticeFinal" layoutX="244.0" layoutY="25.0" prefHeight="25.0" prefWidth="42.0" />
+            <Button layoutX="490.0" layoutY="25.0" mnemonicParsing="false" onAction="#agregarArista" text="Agregar" />
+            <Label layoutX="306.0" layoutY="29.0" text="Distanica(Peso):" />
+            <TextField fx:id="txtfPeso" layoutX="395.0" layoutY="24.0" prefHeight="27.0" prefWidth="81.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apRuta" layoutY="531.0" prefHeight="127.0" prefWidth="600.0" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="531.0">
+         <children>
+            <Label layoutX="62.0" text="Generar Recorrido" />
+            <TextArea fx:id="txtArecorrido" layoutX="251.0" layoutY="19.0" prefHeight="56.0" prefWidth="99.0" />
+            <Button layoutX="54.0" layoutY="101.0" mnemonicParsing="false" onAction="#generarRecorrido" text="Generar Recorrido" />
+            <ComboBox fx:id="cbxRecorrido" layoutX="110.0" layoutY="22.0" prefHeight="0.0" prefWidth="113.0" />
+            <ComboBox fx:id="cbxVerticeRecorrido" layoutX="110.0" layoutY="60.0" prefHeight="25.0" prefWidth="113.0" />
+            <Label layoutX="31.0" layoutY="26.0" text="Recorrido por:" />
+            <Label layoutX="31.0" layoutY="64.0" text="Vertice Inicial: " />
+            <Label layoutX="409.0" layoutY="26.0" text="Origen:" />
+            <Label layoutX="407.0" layoutY="64.0" text="Destino:" />
+            <ComboBox fx:id="cbxOrigen" layoutX="462.0" layoutY="22.0" prefHeight="25.0" prefWidth="50.0" />
+            <ComboBox fx:id="cbxDestino" layoutX="462.0" layoutY="60.0" prefHeight="25.0" prefWidth="50.0" />
+            <Button layoutX="407.0" layoutY="101.0" mnemonicParsing="false" onAction="#generarCamino" text="Encontrar Camino" />
+            <Label layoutX="387.0" text="Encontrar Camino mas corto" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="270.0" layoutY="670.0" mnemonicParsing="false" onAction="#reiniciarVentana" text="Reiniciar" />
+      <Button layoutX="256.0" layoutY="637.0" mnemonicParsing="false" onAction="#mostrarVentanaGrafo" text="Mostrar Grafo" />
+   </children>
+</AnchorPane>
